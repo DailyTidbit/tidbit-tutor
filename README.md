@@ -1,2 +1,2 @@
-# tidbit-tutor
-Your AI chatbot to guide people through Daily Tidbit
+# Tidbit Tutor
+This is the starting point for your AI-powered tutor app.
