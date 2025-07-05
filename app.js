@@ -1,26 +1,18 @@
-
 const chatbox = document.getElementById("chatbox");
 const form = document.getElementById("chat-form");
 const input = document.getElementById("user-input");
 
 async function callChatGPT(userMessage) {
-  const response = await fetch("https://api.openai.com/v1/chat/completions", {
+  const response = await fetch("/api/chat", {
     method: "POST",
     headers: {
-      "Content-Type": "application/json",
-      "Authorization": `Bearer ${process.env.OPENAI_API_KEY}`
+      "Content-Type": "application/json"
     },
-    body: JSON.stringify({
-      model: "gpt-4o",
-      messages: [
-        { role: "system", content: "You're Tidbit Tutor, a friendly, helpful guide to AI tips from DailyTidbit.org. Keep answers short, clear, and beginner-friendly. Ask follow-up questions if the user seems stuck." },
-        { role: "user", content: userMessage }
-      ]
-    })
+    body: JSON.stringify({ userMessage })
   });
 
   const data = await response.json();
-  return data.choices?.[0]?.message?.content || "Hmm, something went wrong.";
+  return data.reply || "Hmm, something went wrong.";
 }
 
 form.addEventListener("submit", async (e) => {
