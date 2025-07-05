@@ -1,1 +1,45 @@
-body { font-family: Arial, sans-serif; background: #f4f4f4; color: #333; }
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+#chatbox {
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  padding: 10px;
+  background: #fff;
+}
+.user-msg, .ai-msg {
+  margin: 10px 0;
+}
+.user-msg {
+  text-align: right;
+  color: blue;
+}
+.ai-msg {
+  text-align: left;
+  color: green;
+}
+form {
+  display: flex;
+  gap: 10px;
+}
+input[type="text"] {
+  flex: 1;
+  padding: 10px;
+}
+button {
+  padding: 10px 20px;
+}
