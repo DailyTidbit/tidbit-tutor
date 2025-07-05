@@ -1,5 +1,46 @@
-body { font-family: Arial, sans-serif; background: #f8f8f8; }
-.container { max-width: 600px; margin: 40px auto; background: #fff; padding: 20px; border-radius: 8px; }
-.chatbox { border: 1px solid #ccc; height: 300px; overflow-y: scroll; padding: 10px; margin-bottom: 10px; }
-.user-msg { text-align: right; color: blue; }
-.ai-msg { text-align: left; color: green; }
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f8f8;
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  width: 90%;
+  max-width: 600px;
+}
+
+.chatbox {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+  background: #f0f0f0;
+}
+
+.user-msg {
+  color: blue;
+  margin: 0.5rem 0;
+}
+
+.ai-msg {
+  color: green;
+  margin: 0.5rem 0;
+}
+
+form {
+  display: flex;
+  gap: 0.5rem;
+}
+
+input[type="text"] {
+  flex-grow: 1;
+  padding: 0.5rem;
+}
